@@ -23,20 +23,6 @@ void loop() {
   delay(3000);
   turnRight(0.5);
   delay(10000);
-//  delay(3000);
-//  digitalWrite(LB, 1);
-//  delay(1000);
-//  digitalWrite(LB, 0);
-//  digitalWrite(LF, 1);
-//  delay(1000);
-//  digitalWrite(LF, 0);
-//  digitalWrite(RF, 1);
-//  delay(1000);
-//  digitalWrite(RF, 0);
-//  digitalWrite(RB, 1);
-//  delay(1000);
-//  digitalWrite(RB, 0);
-//  delay(10000);
 }
 
 void turnRight(float seconds){
@@ -44,6 +30,43 @@ void turnRight(float seconds){
   digitalWrite(RF, 0);
   digitalWrite(LB, 0);
   digitalWrite(LF, 1);
+  delay(seconds*1000);
+  digitalWrite(RB, 0);
+  digitalWrite(RF, 0);
+  digitalWrite(LB, 0);
+  digitalWrite(LF, 0);
+}
+
+void turnLeft(float seconds){
+  digitalWrite(RB, 0);
+  digitalWrite(RF, 1);
+  digitalWrite(LB, 1);
+  digitalWrite(LF, 0);
+  delay(seconds*1000);
+  digitalWrite(RB, 0);
+  digitalWrite(RF, 0);
+  digitalWrite(LB, 0);
+  digitalWrite(LF, 0);
+}
+
+void forward(float seconds){
+  digitalWrite(RB, 0);
+  digitalWrite(RF, 1);
+  digitalWrite(LB, 0);
+  digitalWrite(LF, 1);
+  delay(seconds*1000);
+  digitalWrite(RB, 0);
+  digitalWrite(RF, 0);
+  digitalWrite(LB, 0);
+  digitalWrite(LF, 0);
+}
+
+
+void backwards(float seconds){
+  digitalWrite(RB, 1);
+  digitalWrite(RF, 0);
+  digitalWrite(LB, 1);
+  digitalWrite(LF, 0);
   delay(seconds*1000);
   digitalWrite(RB, 0);
   digitalWrite(RF, 0);
