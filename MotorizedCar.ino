@@ -1,9 +1,10 @@
-int RB = 5;
+int RSpeed = 2;
+int RB = 0;
 int RF = 4;
-int LF = 0;
-int LB = 2;
-int LSpeed = 14;
-int RSpeed = 12;
+int LF = 5;
+int LB = 3;
+int LSpeed = 1;
+
 void setup() {
   pinMode(LB, OUTPUT);
   pinMode(LF, OUTPUT);
@@ -22,6 +23,9 @@ void setup() {
 void loop() {
   delay(3000);
   turnRight(0.5);
+  forward(0.5);
+  turnLeft(0.5);
+  backwards(0.5);
   delay(10000);
 }
 
